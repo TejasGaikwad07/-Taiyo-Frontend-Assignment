@@ -1,46 +1,95 @@
-# Getting Started with Create React App
+# Contact Management App with Charts and Maps
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This application allows users to manage contacts, view detailed information, and perform CRUD operations (Create, Read, Update, Delete). Additionally, the app features a dashboard with a line graph showing COVID-19 case fluctuations and a map displaying COVID-19 statistics for different countries.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### Contacts Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Form to add new contacts.**
+- **Display a list of all added contacts.**
+- **View contact details.**
+- **Edit and delete contacts.**
+- **Use of Redux for state management.**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Dashboard Page
 
-### `npm test`
+- **Line graph showing COVID-19 cases fluctuations over time.**
+- **Map with markers indicating COVID-19 statistics for each country.**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **Frontend:**
+  - ReactJS with TypeScript
+  - TailwindCSS for styling
+  - React Router v6 for routing
+  - React Query (Tanstack Query) for data fetching
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Backend API:**
+  - COVID-19 data APIs
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Setup Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Clone the Repository
 
-### `npm run eject`
+```bash
+git clone https://github.com/TejasGaikwad07/Taiyo-Frontend-Assignment
+2. Install Dependencies
+Ensure you have Node.js and npm installed. Run the following command to install the necessary dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+bash
+Copy code
+npm install
+2. Install Dependencies
+Ensure you have Node.js and npm installed. Run the following command to install the necessary dependencies:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
+Copy code
+npm install
+3. Run the App
+Start the development server with:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+bash
+Copy code
+npm start
+This will open the application in your default web browser. The app will be available at http://localhost:3000.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Build the App
+To create a production build, run:
 
-## Learn More
+bash
+Copy code
+npm run build
+This will generate a build directory containing the optimized production files.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+API Endpoints Used
+1. Worldwide Data of Cases
+Endpoint: https://disease.sh/v3/covid-19/all
+Description: Fetches global COVID-19 statistics including total cases, deaths, and recovered.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Country-Specific Data of Cases
+Endpoint: https://disease.sh/v3/covid-19/countries
+Description: Provides COVID-19 statistics for individual countries, including active cases, recovered cases, and deaths.
+
+3. Graph Data for Cases with Date
+Endpoint: https://disease.sh/v3/covid-19/historical/all?lastdays=all
+Description: Supplies historical data of COVID-19 cases over time for generating a line graph.
+
+App Structure
+src/
+components/ - Reusable components like ContactList, ContactForm, LineChart, Map, etc.
+pages/ - Page components for ContactsPage and DashboardPage.
+redux/ - Redux slices and store configuration.
+types/ - TypeScript type definitions.
+App.tsx - Main application component with routing.
+index.tsx - Entry point of the React application.
+
+Usage
+Contacts Page
+Use the form to add new contacts.
+Edit or delete existing contacts using the buttons next to each contact.
+Dashboard Page
+View the line graph for COVID-19 case fluctuations.
+Explore the map with country-specific COVID-19 statistics.
