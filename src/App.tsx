@@ -11,7 +11,7 @@ const App: React.FC = () => {
         <Route path="/" element={<SidebarLayout />}>
           <Route path="contacts" element={<ContactsPage />} />
           <Route path="dashboard" element={<DashboardPage />} />
-          <Route index element={<DashboardPage />} />
+          <Route index element={<ContactsPage />} />
         </Route>
       </Routes>
     </Router>
