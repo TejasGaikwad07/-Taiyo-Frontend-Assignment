@@ -33,34 +33,24 @@ This application allows users to manage contacts, view detailed information, and
 ## Setup Instructions
 
 ### 1. Clone the Repository
-
 ```bash
 git clone https://github.com/TejasGaikwad07/Taiyo-Frontend-Assignment
 2. Install Dependencies
 Ensure you have Node.js and npm installed. Run the following command to install the necessary dependencies:
-
-bash
-Copy code
+```bash
 npm install
 2. Install Dependencies
 Ensure you have Node.js and npm installed. Run the following command to install the necessary dependencies:
-
-bash
-Copy code
+```bash
 npm install
 3. Run the App
 Start the development server with:
-
-bash
-Copy code
+```bash
 npm start
 This will open the application in your default web browser. The app will be available at http://localhost:3000.
-
 4. Build the App
 To create a production build, run:
-
-bash
-Copy code
+```bash
 npm run build
 This will generate a build directory containing the optimized production files.
 
